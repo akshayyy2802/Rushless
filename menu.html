@@ -1,101 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Main Canteen</title>
-  <link rel="stylesheet" href="menu.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Main Canteen</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: white;
+  position: sticky;
+  top: 0;
+}
+
+.header h2 {
+  font-size: 20px;
+}
+
+/* SCROLLABLE MENU */
+.menu {
+  height: calc(100vh - 140px);
+  overflow-y: auto;
+  padding: 10px;
+}
+
+/* ITEM CARD */
+.item {
+  display: flex;
+  background: white;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.info {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.info h4 {
+  font-size: 16px;
+}
+
+.right {
+  text-align: right;
+}
+
+.right button {
+  margin-top: 5px;
+  background: #ff7a00;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* CART */
+.cart {
+  position: fixed;
+  bottom: 20px;
+  left: 10%;
+  width: 80%;
+  background: #ff7a00;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+</style>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <div class="header">
-    <span class="back" onclick="goBack()">←</span>
-    <h2>Main Canteen</h2>
-    <span class="bell">🔔</span>
+<div class="header">
+  <span onclick="goBack()">←</span>
+  <h2>Main Canteen</h2>
+  <span>🔔</span>
+</div>
+
+<div class="menu">
+
+  <div class="item">
+    <img src="https://picsum.photos/100?1">
+    <div class="info">
+      <h4>Cheese Burger</h4>
+      ⭐ 4.5
+    </div>
+    <div class="right">
+      ₹89 <br>
+      <button onclick="add()">+ Add</button>
+    </div>
   </div>
 
-  <!-- Tabs -->
-  <div class="tabs">
-    <span class="active">All</span>
-    <span>Snacks</span>
-    <span>Meals</span>
-    <span>Beverages</span>
-    <span>Combos</span>
+  <div class="item">
+    <img src="https://picsum.photos/100?2">
+    <div class="info">
+      <h4>Paneer Wrap</h4>
+      ⭐ 4.0
+    </div>
+    <div class="right">
+      ₹69 <br>
+      <button onclick="add()">+ Add</button>
+    </div>
   </div>
 
-  <!-- MENU LIST (SCROLLABLE) -->
-  <div class="menu">
-
-    <!-- ITEM -->
-    <div class="item">
-      <img src="https://via.placeholder.com/80">
-      <div class="info">
-        <h3>Cheese Burger</h3>
-        <p>⭐ 4.5</p>
-      </div>
-      <div class="right">
-        <span>₹89</span>
-        <button onclick="addItem()">+ Add</button>
-      </div>
+  <div class="item">
+    <img src="https://picsum.photos/100?3">
+    <div class="info">
+      <h4>Cold Coffee</h4>
+      ⭐ 4.5
     </div>
-
-    <div class="item">
-      <img src="https://via.placeholder.com/80">
-      <div class="info">
-        <h3>Veg Paneer Wrap</h3>
-        <p>⭐ 4.0</p>
-      </div>
-      <div class="right">
-        <span>₹69</span>
-        <button onclick="addItem()">+ Add</button>
-      </div>
+    <div class="right">
+      ₹49 <br>
+      <button onclick="add()">+ Add</button>
     </div>
-
-    <div class="item">
-      <img src="https://via.placeholder.com/80">
-      <div class="info">
-        <h3>Cold Coffee</h3>
-        <p>⭐ 4.5</p>
-      </div>
-      <div class="right">
-        <span>₹49</span>
-        <button onclick="addItem()">+ Add</button>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="https://via.placeholder.com/80">
-      <div class="info">
-        <h3>Margherita Pizza</h3>
-        <p>⭐ 4.0</p>
-      </div>
-      <div class="right">
-        <span>₹129</span>
-        <button onclick="addItem()">+ Add</button>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="https://via.placeholder.com/80">
-      <div class="info">
-        <h3>French Fries</h3>
-        <p>⭐ 3.5</p>
-      </div>
-      <div class="right">
-        <span>₹59</span>
-        <button onclick="addItem()">+ Add</button>
-      </div>
-    </div>
-
   </div>
 
-  <!-- CART BUTTON -->
-  <div class="cart">
-    🛒 View Cart (<span id="count">0</span> items)
-  </div>
+</div>
 
-  <script src="menu.js"></script>
+<div class="cart">
+  🛒 View Cart (<span id="count">0</span>)
+</div>
+
+<script>
+let count = 0;
+
+function add() {
+  count++;
+  document.getElementById("count").innerText = count;
+}
+
+function goBack() {
+  window.location.href = "canteen.html";
+}
+</script>
 
 </body>
 </html>
