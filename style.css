@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f8f8;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Banner Image */
+.banner {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+}
+
+/* Title */
+.title {
+  font-size: 40px;
+  color: #0f3d3e;
+  margin-top: 20px;
+}
+
+.icon {
+  color: orange;
+  font-size: 28px;
+}
+
+/* Lines */
+.lines {
+  margin: 20px 0;
+}
+
+.lines span {
+  display: block;
+  width: 40px;
+  height: 6px;
+  background: #ccc;
+  margin: 8px auto;
+  border-radius: 5px;
+}
+
+/* Tagline */
+.tagline {
+  font-size: 28px;
+  color: #0f3d3e;
+  margin-top: 40px;
+  line-height: 1.4;
+}
