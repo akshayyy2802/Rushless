@@ -1,77 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RushLess - Canteen</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canteen</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: #000;
-    }
-
-    .screen {
-      position: relative;
-      width: 100%;
-      height: 100dvh;
-      overflow: hidden;
-    }
-
-    /* PNG background */
-    .bg {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      pointer-events: none; /* important */
-    }
-
-    /* Clickable areas */
-    .click {
-      position: absolute;
-      width: 80%;
-      left: 10%;
-      height: 80px;
-      cursor: pointer;
-    }
-
-    /* Positions (adjust if needed) */
-    .main { top: 260px; }
-    .south { top: 360px; }
-    .cafe { top: 460px; }
-    .amul { top: 560px; }
-
-  </style>
+<link rel="stylesheet" href="canteen.css">
 </head>
 
 <body>
 
-  <div class="screen">
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">RushLess 🍽️</div>
+  <div class="bell">🔔</div>
+</div>
 
-    <!-- Full UI Image -->
-    <img src="assets/canteen.png" class="bg" alt="">
+<!-- TITLE -->
+<div class="title">
+  Select <span>Canteen</span>
+</div>
 
-    <!-- Clickable areas -->
-    <div class="click main" onclick="openMenu()"></div>
-    <div class="click south" onclick="openMenu()"></div>
-    <div class="click cafe" onclick="openMenu()"></div>
-    <div class="click amul" onclick="openMenu()"></div>
+<!-- SEARCH -->
+<input class="search" placeholder="Search canteen or food...">
 
+<!-- CARDS -->
+<div class="card" onclick="openMenu('Main Canteen')">
+  <div class="left">
+    <div class="icon">🍱</div>
+    <div>
+      <div class="name">Main Canteen</div>
+      <div class="sub">North Indian • Snacks</div>
+    </div>
   </div>
+  <div class="status">Open now ></div>
+</div>
 
-  <script>
-    function openMenu() {
-      window.location.href = "menu.html";
-    }
-  </script>
+<div class="card" onclick="openMenu('South Canteen')">
+  <div class="left">
+    <div class="icon">🥞</div>
+    <div>
+      <div class="name">South Canteen</div>
+      <div class="sub">South Indian • Dosa</div>
+    </div>
+  </div>
+  <div class="status">Open now ></div>
+</div>
+
+<div class="card" onclick="openMenu('Cafe Corner')">
+  <div class="left">
+    <div class="icon">☕</div>
+    <div>
+      <div class="name">Cafe Corner</div>
+      <div class="sub">Beverages • Bakery</div>
+    </div>
+  </div>
+  <div class="status">Open now ></div>
+</div>
+
+<div class="card" onclick="openMenu('Amul Parlour')">
+  <div class="left">
+    <div class="icon">🍦</div>
+    <div>
+      <div class="name">Amul Parlour</div>
+      <div class="sub">Shakes • Ice Cream</div>
+    </div>
+  </div>
+  <div class="status">Open now ></div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <div>🏠 Home</div>
+  <div>📦 Orders</div>
+  <div>👤 Profile</div>
+</div>
+
+<script src="canteen.js"></script>
 
 </body>
 </html>
