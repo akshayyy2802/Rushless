@@ -9,7 +9,7 @@ body {
   background: #000;
 }
 
-/* Full screen like mobile app */
+/* Full screen */
 .screen {
   width: 100%;
   height: 100vh;
@@ -17,27 +17,32 @@ body {
   overflow: hidden;
 }
 
-/* Image */
+/* Banner */
 .banner {
   width: 100%;
-  height: 60%;
+  height: 70%;
   object-fit: cover;
 }
 
-/* Content area */
+/* Overlay (IMPORTANT FIX) */
 .content {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 50%;
-  background: linear-gradient(to top, #ffffff, rgba(255,255,255,0.8), transparent);
+  height: 60%;
+  background: linear-gradient(
+    to top,
+    #ffffff 40%,
+    rgba(255,255,255,0.9) 70%,
+    rgba(255,255,255,0.0) 100%
+  );
   text-align: center;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 /* Title */
 .title {
-  font-size: 36px;
+  font-size: 38px;
   color: #0f3d3e;
 }
 
@@ -46,10 +51,6 @@ body {
 }
 
 /* Lines */
-.lines {
-  margin: 15px 0;
-}
-
 .lines span {
   display: block;
   width: 40px;
@@ -61,25 +62,19 @@ body {
 
 /* Tagline */
 .tagline {
-  font-size: 24px;
+  font-size: 26px;
   color: #0f3d3e;
-  margin-top: 20px;
+  margin-top: 25px;
   line-height: 1.5;
 }
 
 /* Button */
 .btn {
-  margin-top: 25px;
-  padding: 12px 30px;
+  margin-top: 30px;
+  padding: 12px 28px;
   background: #ff7a00;
   color: white;
   border: none;
   border-radius: 25px;
   font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #e56d00;
 }
