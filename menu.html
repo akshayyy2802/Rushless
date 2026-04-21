@@ -159,10 +159,21 @@ function add() {
 function goBack() {
   window.location.href = "canteen.html";
 }
-</script>
+<script>
+let count = 0;
 
-  function goCart() {
+function add() {
+  count++;
+  document.getElementById("count").innerText = count;
+}
+
+function goBack() {
+  window.location.href = "canteen.html";
+}
+
+function goCart() {
   window.location.href = "cart.html";
 }
+</script>
 </body>
 </html>
