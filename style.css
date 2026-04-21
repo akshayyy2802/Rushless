@@ -22,6 +22,7 @@ body {
   width: 100%;
   height: 60vh;   /* responsive height */
   object-fit: cover;
+   object-position: center 30%; /* 👈 pushes image DOWN */
 }
 
 /* Overlay content */
