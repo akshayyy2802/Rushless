@@ -3,9 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RushLess</title>
-  <link rel="stylesheet" href="canteen.css">
+  <title>RushLess - Canteen</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+    }
+
+    .screen {
+      position: relative;
+      width: 100%;
+      height: 100dvh;
+      overflow: hidden;
+    }
+
+    /* PNG background */
+    .bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none; /* important */
+    }
+
+    /* Clickable areas */
+    .click {
+      position: absolute;
+      width: 80%;
+      left: 10%;
+      height: 80px;
+      cursor: pointer;
+    }
+
+    /* Positions (adjust if needed) */
+    .main { top: 260px; }
+    .south { top: 360px; }
+    .cafe { top: 460px; }
+    .amul { top: 560px; }
+
+  </style>
 </head>
+
 <body>
 
   <div class="screen">
@@ -13,23 +59,19 @@
     <!-- Full UI Image -->
     <img src="assets/canteen.png" class="bg" alt="">
 
-    <!-- Clickable Areas -->
-
-    <!-- Main Canteen -->
-    <div class="click main" onclick="openCanteen('main')"></div>
-
-    <!-- South -->
-    <div class="click south" onclick="openCanteen('south')"></div>
-
-    <!-- Cafe -->
-    <div class="click cafe" onclick="openCanteen('cafe')"></div>
-
-    <!-- Amul -->
-    <div class="click amul" onclick="openCanteen('amul')"></div>
+    <!-- Clickable areas -->
+    <div class="click main" onclick="openMenu()"></div>
+    <div class="click south" onclick="openMenu()"></div>
+    <div class="click cafe" onclick="openMenu()"></div>
+    <div class="click amul" onclick="openMenu()"></div>
 
   </div>
 
-  <script src="canteen.js"></script>
+  <script>
+    function openMenu() {
+      window.location.href = "menu.html";
+    }
+  </script>
 
 </body>
 </html>
