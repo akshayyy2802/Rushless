@@ -3,202 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cart</title>
+<title>Queue Tracker</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial;
-}
-
 body {
-  background: #f3f3f3;
-}
-
-/* HEADER */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background: white;
-}
-
-.header h2 {
-  font-size: 20px;
-}
-
-.sub {
+  font-family: Arial;
+  background: #f2f2f2;
+  margin: 0;
   text-align: center;
-  color: gray;
-  font-size: 14px;
-  margin-top: -5px;
 }
 
-/* CONTAINER */
-.container {
-  padding: 15px;
-}
-
-/* CARD */
 .card {
   background: white;
+  margin: 20px;
+  padding: 20px;
   border-radius: 15px;
-  padding: 15px;
-  margin-bottom: 15px;
 }
 
-.item {
+.circle {
+  width: 180px;
+  height: 180px;
+  margin: 20px auto;
+  border-radius: 50%;
+  background: conic-gradient(#ff7a00 40%, #2e7d32 60%);
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  justify-content: center;
 }
 
-.item img {
-  width: 70px;
-  height: 70px;
-  border-radius: 10px;
-}
-
-.info {
-  flex: 1;
-  margin-left: 10px;
-}
-
-.qty {
+.inner {
+  width: 130px;
+  height: 130px;
+  background: white;
+  border-radius: 50%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
 }
 
-.qty button {
-  padding: 4px 10px;
-  border: none;
-  background: #ddd;
-  border-radius: 5px;
-}
-
-/* PRICE */
-.price {
-  text-align: right;
-}
-
-/* SUMMARY */
-.summary div {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-
-.total {
-  font-weight: bold;
-}
-
-/* BUTTON */
-.checkout {
-  position: fixed;
-  bottom: 20px;
-  left: 10%;
-  width: 80%;
-  background: #ff7a00;
+.btn {
+  margin: 20px;
+  background: orange;
   color: white;
-  text-align: center;
   padding: 15px;
   border-radius: 30px;
-  font-weight: bold;
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
-  <span onclick="goBack()">←</span>
-  <h2>Your Cart</h2>
-  <span>🔔</span>
+<h2>Live Queue Tracker</h2>
+
+<div class="card">
+  <h3>Order #RUSH-4582</h3>
+  <p>Status: Being Prepared ⭐</p>
 </div>
-<div class="sub">Main Canteen</div>
 
-<!-- CONTENT -->
-<div class="container">
-
-  <div class="card">
-
-    <!-- ITEM 1 -->
-    <div class="item">
-      <img src="https://picsum.photos/80?1">
-      <div class="info">
-        <h4>Samosa × 2</h4>
-        ⭐ 4.0
-      </div>
-
-      <div class="qty">
-        <button onclick="change(-1)">-</button>
-        <span id="q1">2</span>
-        <button onclick="change(1)">+</button>
-      </div>
-
-      <div class="price">₹20</div>
-    </div>
-
-    <!-- ITEM 2 -->
-    <div class="item">
-      <img src="https://picsum.photos/80?2">
-      <div class="info">
-        <h4>Hot Garlic Pasta</h4>
-        ⭐ 4.5
-      </div>
-
-      <div class="qty">
-        <button onclick="change2(-1)">-</button>
-        <span id="q2">1</span>
-        <button onclick="change2(1)">+</button>
-      </div>
-
-      <div class="price">₹129</div>
-    </div>
-
-    <!-- SUMMARY -->
-    <div class="summary">
-      <div><span>Subtotal</span><span id="subtotal">₹149</span></div>
-      <div><span>Taxes & Charges</span><span>₹18</span></div>
-      <div><span>Discount</span><span style="color:green">- ₹17</span></div>
-      <div class="total"><span>Total</span><span id="total">₹150</span></div>
-    </div>
-
+<div class="circle">
+  <div class="inner">
+    <h1>3</h1>
+    <p>people ahead</p>
   </div>
-
 </div>
 
-<!-- BUTTON -->
-<div class="checkout">
-  🛒 Proceed to Book Slot
+<p>You can arrive 5 minutes before your slot.</p>
+
+<div class="card">
+  <p>Order #QX-8719 - 12 min</p>
+  <p>Order #QX-8720</p>
+  <p>Order #QX-8721</p>
 </div>
 
-<script>
-let q1 = 2;
-let q2 = 1;
-
-function change(val) {
-  q1 += val;
-  if(q1 < 1) q1 = 1;
-  document.getElementById("q1").innerText = q1;
-}
-
-function change2(val) {
-  q2 += val;
-  if(q2 < 1) q2 = 1;
-  document.getElementById("q2").innerText = q2;
-}
-
-function goBack() {
-  window.location.href = "menu.html";
-}
-</script>
+<div class="btn">
+  View Orders
+</div>
 
 </body>
 </html>
