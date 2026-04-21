@@ -1,3 +1,4 @@
-function openCanteen(type) {
-  alert(type + " canteen opened 🚀");
+function openMenu(name) {
+  localStorage.setItem("canteen", name);
+  window.location.href = "menu.html";
 }
