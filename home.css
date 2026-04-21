@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #fff;
+}
+
+/* Full screen */
+.screen {
+  width: 100%;
+  min-height: 100dvh;
+  padding: 20px;
+}
+
+/* Top bar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #0f3d3e;
+}
+
+.skip {
+  color: #333;
+  font-size: 14px;
+}
+
+/* Content */
+.content {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Heading */
+.welcome {
+  font-size: 32px;
+  color: #0f3d3e;
+}
+
+.tagline {
+  color: #ff7a00;
+  margin-top: 10px;
+}
+
+/* Image */
+.character {
+  width: 80%;
+  margin: 20px 0;
+}
+
+/* Google button */
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background: #ccc;
+}
+
+.divider p {
+  margin: 0 10px;
+  color: #999;
+}
+
+/* Phone button */
+.phone-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: #ff7a00;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.phone-btn small {
+  display: block;
+  font-size: 12px;
+}
+
+/* Signup */
+.signup {
+  margin-top: 20px;
+  color: #333;
+}
+
+.signup span {
+  color: #0f3d3e;
+  font-weight: bold;
+}
