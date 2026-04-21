@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Slot</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: white;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: gray;
+  font-size: 14px;
+}
+
+/* WAIT BOX */
+.wait-box {
+  background: #fff;
+  border: 2px solid #ff7a00;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.live {
+  float: right;
+  background: green;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* SLOT LIST */
+.slots {
+  padding: 15px;
+}
+
+.slot {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+
+.slot.active {
+  background: #2e7d32;
+  color: white;
+}
+
+.fast {
+  color: orange;
+}
+
+/* FOOTER */
+.summary {
+  padding: 15px;
+  color: gray;
+}
+
+.order {
+  padding: 0 15px;
+  margin-bottom: 10px;
+}
+
+/* BUTTON */
+.confirm {
+  position: fixed;
+  bottom: 20px;
+  left: 10%;
+  width: 80%;
+  background: #ff7a00;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <span onclick="goBack()">←</span>
+  <span>🔔</span>
+</div>
+
+<div class="title">
+  <h2>Choose your smart slot</h2>
+</div>
+
+<div class="subtitle">Main Canteen</div>
+
+<!-- WAIT INFO -->
+<div class="wait-box">
+  <span class="live">Live</span>
+  <p><b>Current waiting:</b> 7 students</p>
+  <p><b>Est. wait time:</b> ~12 min</p>
+</div>
+
+<!-- SLOT LIST -->
+<div class="slots">
+
+  <div class="slot active">12:00 PM <span>Available</span></div>
+  <div class="slot">12:15 PM <span>Available</span></div>
+  <div class="slot">12:30 PM <span class="fast">Filling fast</span></div>
+  <div class="slot">12:45 PM <span>Available</span></div>
+  <div class="slot">1:00 PM <span>Available</span></div>
+  <div class="slot">1:05 PM <span>Available</span></div>
+  <div class="slot">1:15 PM <span>Available</span></div>
+
+</div>
+
+<div class="summary">
+  Based on real-time queue & AI prediction
+</div>
+
+<div class="order">
+  Samosa ×2 + Hot Garlic Pasta ×1 = ₹150
+</div>
+
+<!-- BUTTON -->
+<div class="confirm" onclick="confirmSlot()">
+  Confirm Booking
+</div>
+
+<script>
+function goBack() {
+  window.location.href = "cart.html";
+}
+
+function confirmSlot() {
+  alert("Booking Confirmed 🎉");
+}
+</script>
+
+</body>
+</html>
