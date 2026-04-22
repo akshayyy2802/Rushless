@@ -66,13 +66,28 @@ body {
   font-weight: 600;
 }
 
-/* BUTTON */
+/* ADD BUTTON */
 .add-btn {
   background: #ff7a00;
   color: white;
   border: none;
   padding: 6px 14px;
   border-radius: 20px;
+  cursor: pointer;
+}
+
+/* CART BUTTON */
+.cart-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 10%;
+  width: 80%;
+  background: #ff7a00;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 30px;
+  font-weight: bold;
   cursor: pointer;
 }
 </style>
@@ -84,12 +99,10 @@ body {
 <!-- ITEM 1 -->
 <div class="item">
   <img src="assets/burger.jpg" class="food-img">
-
   <div class="info">
     <h3>Cheese Burger</h3>
     <p>⭐ 4.5</p>
   </div>
-
   <div class="right">
     <span class="price">₹89</span>
     <button class="add-btn" onclick="add()">+ Add</button>
@@ -99,12 +112,10 @@ body {
 <!-- ITEM 2 -->
 <div class="item">
   <img src="assets/wrap.jpg" class="food-img">
-
   <div class="info">
     <h3>Veg Paneer Wrap</h3>
     <p>⭐ 4.0</p>
   </div>
-
   <div class="right">
     <span class="price">₹69</span>
     <button class="add-btn" onclick="add()">+ Add</button>
@@ -114,12 +125,10 @@ body {
 <!-- ITEM 3 -->
 <div class="item">
   <img src="assets/coffee.jpg" class="food-img">
-
   <div class="info">
     <h3>Cold Coffee</h3>
     <p>⭐ 4.5</p>
   </div>
-
   <div class="right">
     <span class="price">₹49</span>
     <button class="add-btn" onclick="add()">+ Add</button>
@@ -129,12 +138,10 @@ body {
 <!-- ITEM 4 -->
 <div class="item">
   <img src="assets/pizza.jpg" class="food-img">
-
   <div class="info">
     <h3>Margherita Pizza</h3>
     <p>⭐ 4.3</p>
   </div>
-
   <div class="right">
     <span class="price">₹129</span>
     <button class="add-btn" onclick="add()">+ Add</button>
@@ -144,12 +151,10 @@ body {
 <!-- ITEM 5 -->
 <div class="item">
   <img src="assets/fries.jpg" class="food-img">
-
   <div class="info">
     <h3>French Fries</h3>
     <p>⭐ 4.2</p>
   </div>
-
   <div class="right">
     <span class="price">₹59</span>
     <button class="add-btn" onclick="add()">+ Add</button>
@@ -159,12 +164,10 @@ body {
 <!-- ITEM 6 -->
 <div class="item">
   <img src="assets/pasta.jpg" class="food-img">
-
   <div class="info">
     <h3>Hot Garlic Pasta</h3>
     <p>⭐ 4.5</p>
   </div>
-
   <div class="right">
     <span class="price">₹129</span>
     <button class="add-btn" onclick="add()">+ Add</button>
@@ -174,21 +177,28 @@ body {
 <!-- ITEM 7 -->
 <div class="item">
   <img src="assets/samosa.jpg" class="food-img">
-
   <div class="info">
     <h3>Samosa</h3>
     <p>⭐ 4.0</p>
   </div>
-
   <div class="right">
     <span class="price">₹20</span>
     <button class="add-btn" onclick="add()">+ Add</button>
   </div>
 </div>
 
+<!-- VIEW CART BUTTON -->
+<div class="cart-btn" onclick="goCart()">
+  🛒 View Cart
+</div>
+
 <script>
 function add() {
   alert("Item added to cart 🛒");
+}
+
+function goCart() {
+  window.location.href = "cart.html";
 }
 </script>
 
