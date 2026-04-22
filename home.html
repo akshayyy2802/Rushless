@@ -4,45 +4,79 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RushLess</title>
-<link rel="stylesheet" href="home.css">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: #f5f5f5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0f5c5c;
+  margin-bottom: 20px;
+}
+
+/* SKIP BUTTON (LOOKS LIKE TEXT) */
+.skip-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: black;
+
+  /* remove text selection */
+  user-select: none;
+}
+
+/* MAIN BUTTON */
+.start-btn {
+  background: #ff7a00;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+</style>
+
 </head>
 
 <body>
 
-<div class="screen">
+<!-- SKIP -->
+<button class="skip-btn" onclick="goCanteen()">Skip for now</button>
 
-  <!-- HEADER -->
-  <div class="header">
-    <h2>RushLess 🍽️</h2>
-    <button onclick="skip()">Skip for now</button>
-  </div>
+<!-- LOGO -->
+<div class="logo">RushLess</div>
 
-  <!-- MAIN CONTENT -->
-  <div class="main">
+<!-- MAIN BUTTON -->
+<button class="start-btn" onclick="goCanteen()">
+  Start Ordering
+</button>
 
-    <h1>Welcome to<br>RushLess</h1>
-    <p>Lines Hatao, Time Bachao</p>
+<script>
+function goCanteen() {
+  window.location.href = "canteen.html";
+}
+</script>
 
-    <!-- Illustration (optional) -->
-    <div class="illustration">
-      <img src="assets/login.png" alt="">
-    </div>
-
-    <!-- BUTTONS -->
-    <button class="google">Continue with Google</button>
-
-    <div class="divider">
-      <span></span> OR <span></span>
-    </div>
-
-    <button class="phone">Continue with Phone Number</button>
-
-    <p class="signup">New here? <b>Sign up</b></p>
-
-  </div>
-
-</div>
-
-<script src="home.js"></script>
 </body>
 </html>
