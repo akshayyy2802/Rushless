@@ -89,21 +89,22 @@ body {
 /* BACK BUTTON (ONLY ARROW STYLE) */
 
 .back-btn {
-  background: transparent;
-  border: none;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+
   font-size: 22px;
   cursor: pointer;
 
-  /* prevent text selection */
+  padding: 0;
+  margin: 0;
+
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+
   user-select: none;
   -webkit-user-select: none;
 
-  /* remove default button styling */
-  outline: none;
-  padding: 0;
-  margin-left: -5px;
-}
-
-.back-btn:active {
-  transform: scale(0.85);
+  color: #000; /* or your theme color */
 }
