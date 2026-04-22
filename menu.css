@@ -113,7 +113,7 @@ body {
   object-fit: cover;
   border-radius: 12px;
 }
-}
+  
 .right {
   display: flex;
   flex-direction: column;
