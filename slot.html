@@ -103,6 +103,26 @@ body {
   border-radius: 30px;
   font-weight: bold;
 }
+<style id="slot-style">
+.slot {
+  background: #fff;
+  padding: 12px;
+  margin: 8px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+/* selected slot */
+.slot.active {
+  background: #2e7d32;
+  color: white;
+}
+
+/* filling fast */
+.fast span {
+  color: orange;
+}
 </style>
 
 </head>
@@ -161,6 +181,17 @@ function goBack() {
 
 function confirmSlot() {
   window.location.href = "queue.html";
+}
+<script id="slot-script">
+function selectSlot(element) {
+
+  // remove green from all
+  document.querySelectorAll(".slot").forEach(slot => {
+    slot.classList.remove("active");
+  });
+
+  // add green to clicked
+  element.classList.add("active");
 }
 </script>
 
