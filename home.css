@@ -6,75 +6,80 @@
 }
 
 body {
-  background: #fff;
+  background: #f7f7f7;
 }
 
-/* Full screen */
+/* SCREEN */
 .screen {
-  width: 100%;
-  min-height: 100dvh;
   padding: 20px;
 }
 
-/* Top bar */
-.topbar {
+/* HEADER */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo {
-  color: #0f3d3e;
+.header h2 {
+  color: #0a3d3f;
 }
 
-.skip {
-  color: #333;
+.header span {
   font-size: 14px;
+  cursor: pointer;
 }
 
-/* Content */
-.content {
+/* MAIN */
+.main {
   text-align: center;
   margin-top: 30px;
 }
 
-/* Heading */
-.welcome {
-  font-size: 32px;
-  color: #0f3d3e;
+.main h1 {
+  font-size: 30px;
+  color: #0a3d3f;
 }
 
-.tagline {
+.main p {
   color: #ff7a00;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
-/* Image */
-.character {
+/* IMAGE */
+.illustration img {
   width: 80%;
-  margin: 20px 0;
+  margin: 25px 0;
 }
 
-/* Google button */
-.google-btn {
+/* BUTTONS */
+button {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   border-radius: 12px;
-  border: none;
-  background: #f5f5f5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 16px;
-  cursor: pointer;
+  margin-top: 10px;
+  font-size: 15px;
 }
 
-/* Divider */
+/* GOOGLE */
+.google {
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+/* PHONE */
+.phone {
+  background: #ff7a00;
+  color: white;
+  border: none;
+}
+
+/* DIVIDER */
 .divider {
+  margin: 15px 0;
   display: flex;
   align-items: center;
-  margin: 20px 0;
+  gap: 10px;
 }
 
 .divider span {
@@ -83,35 +88,8 @@ body {
   background: #ccc;
 }
 
-.divider p {
-  margin: 0 10px;
-  color: #999;
-}
-
-/* Phone button */
-.phone-btn {
-  width: 100%;
-  padding: 14px;
-  border-radius: 12px;
-  border: none;
-  background: #ff7a00;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.phone-btn small {
-  display: block;
-  font-size: 12px;
-}
-
-/* Signup */
+/* SIGNUP */
 .signup {
-  margin-top: 20px;
-  color: #333;
-}
-
-.signup span {
-  color: #0f3d3e;
-  font-weight: bold;
+  margin-top: 15px;
+  font-size: 14px;
 }
