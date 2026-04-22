@@ -87,8 +87,9 @@ body {
   border-radius: 30px;
 }
 /* BACK BUTTON (ONLY ARROW STYLE) */
+
 .back-btn {
-  background: none;
+  background: transparent;
   border: none;
   font-size: 22px;
   cursor: pointer;
@@ -99,40 +100,7 @@ body {
 
   /* remove default button styling */
   outline: none;
-  padding: 8px;
-  margin-left: -5px;
-}
-
-/* BACK BUTTON (ONLY ARROW STYLE) */
-.back-btn {
-  background: none;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
-
-  /* prevent text selection */
-  user-select: none;
-  -webkit-user-select: none;
-
-  /* remove default button styling */
-  outline: none;
-  padding: 8px;
-  margin-left: -5px;
-}
-
-.back-btn {
-  background: none;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
-
-  /* prevent text selection */
-  user-select: none;
-  -webkit-user-select: none;
-
-  /* remove default button styling */
-  outline: none;
-  padding: 8px;
+  padding: 0;
   margin-left: -5px;
 }
 
