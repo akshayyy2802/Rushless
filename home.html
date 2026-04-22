@@ -1,62 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RushLess Login</title>
-  <link rel="stylesheet" href="home.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RushLess</title>
+<link rel="stylesheet" href="home.css">
 </head>
+
 <body>
 
-  <div class="screen">
+<div class="screen">
 
-    <!-- Top Bar -->
-    <div class="topbar">
-      <h2 class="logo">RushLess 🍽️</h2>
-      <a href="canteen.html" class="skip">Skip for now</a>
+  <!-- HEADER -->
+  <div class="header">
+    <h2>RushLess 🍽️</h2>
+    <span onclick="skip()">Skip for now</span>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+    <h1>Welcome to<br>RushLess</h1>
+    <p>Lines Hatao, Time Bachao</p>
+
+    <!-- Illustration (optional) -->
+    <div class="illustration">
+      <img src="assets/login.png" alt="">
     </div>
 
-    <!-- Main Content -->
-    <div class="content">
+    <!-- BUTTONS -->
+    <button class="google">Continue with Google</button>
 
-      <h1 class="welcome">
-        Welcome to<br>RushLess
-      </h1>
-
-      <p class="tagline">
-        Lines Hatao, Time Bachao
-      </p>
-
-      <!-- Character Image -->
-      <img src="assets/character.png" class="character" alt="">
-
-      <!-- Google Button -->
-      <button class="google-btn">
-        <img src="https://img.icons8.com/color/48/google-logo.png"/>
-        Continue with Google
-      </button>
-
-      <!-- OR Divider -->
-      <div class="divider">
-        <span></span>
-        <p>OR</p>
-        <span></span>
-      </div>
-
-      <!-- Phone Button -->
-      <button class="phone-btn">
-        📞 Continue with Phone Number
-        <small>OTP se login in 10 seconds</small>
-      </button>
-
-      <!-- Signup -->
-      <p class="signup">
-        New to RushLess? <span>Sign Up</span>
-      </p>
-
+    <div class="divider">
+      <span></span> OR <span></span>
     </div>
+
+    <button class="phone">Continue with Phone Number</button>
+
+    <p class="signup">New here? <b>Sign up</b></p>
 
   </div>
 
+</div>
+
+<script src="home.js"></script>
 </body>
 </html>
