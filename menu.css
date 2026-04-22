@@ -107,4 +107,10 @@ body {
   -webkit-user-select: none;
 
   color: #000; /* or your theme color */
+.food-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 12px;
+}
 }
